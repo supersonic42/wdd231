@@ -1,9 +1,9 @@
 /* Base Style */
 :root {
     --background-color: #fff;
-    --background-color-secondary: #2381ad;
+    --background-color-secondary: #164E70;
     --text-color: #fff;
-    --text-color-secondary: #2e5ea5;
+    --text-color-secondary: #164E70;
     --main-font: "Montserrat", serif;
 }
 
