@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/course.js" defer></script>
+    <script src="scripts/course.js" defer type="module"></script>
 </head>
 <body>
     <header>
@@ -22,11 +22,11 @@
 
         <nav>
             <ul>
-                <li><a href="">Home</a></li>
+                <li class="selected"><a href="/">Home</a></li>
                 <li><a href="">Chamber</a></li>
                 <li><a href="">Final</a></li>
-                <li><a href="">GitHub Profile</a></li>
-                <li><a href="">LinkedIn</a></li>
+                <li><a href="https://github.com/supersonic42">GitHub Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/anton-sanakoev/">LinkedIn</a></li>
             </ul>
         </nav>
     </header>
@@ -45,13 +45,26 @@
             <section class="madagascar">
                 <h2>Toloria, Madagascar</h2>
                 <figure>
-                    <img src="images/baobab.jpg" alt="Baobab Tree">
-                    <figcaption>Baobab Tree</figcaption>
+                    <img src="images/baobab.jpg" alt="Baobab Trees">
+                    <figcaption>Baobab Trees</figcaption>
                 </figure>
             </section>
             <section class="courses">
                 <h2>Web and Computer Programmint Certificate</h2>
-                <p>Courses List</p>
+                <div class="courses-header">
+                    <a href="#" class="courses-filter-btn" data-type="ALL">All</a>
+                    <a href="#" class="courses-filter-btn" data-type="CSE">CSE</a>
+                    <a href="#" class="courses-filter-btn" data-type="WDD">WDD</a>
+                </div>
+                <div class="courses-credits"></div>
+                <div class="courses-content">
+                    <div class="course">CSE</div>
+                    <div class="course">CSE</div>
+                    <div class="course">CSE</div>
+                    <div class="course">CSE</div>
+                    <div class="course">CSE</div>
+                    <div class="course">CSE</div>  
+                </div>
             </section>
         </div>
     </main>

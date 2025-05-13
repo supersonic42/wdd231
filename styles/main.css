@@ -76,6 +76,7 @@ main section h2 {
     font-size: 1rem;
     margin: 0;
     padding: 1rem;
+    text-align: center;
 }
 
 .course-work {
@@ -90,6 +91,66 @@ main section h2 {
 .courses {
     flex: 0 0 100%;
     margin-top: 1rem;
+}
+
+.courses-header {
+    border-bottom: 1px solid var(--background-color-secondary);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.courses-filter-btn {
+    background-color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: var(--text-color);
+    flex: 0 0 20%;
+    font-weight: 700;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.courses-credits {
+    border-bottom: 1px solid var(--background-color-secondary);
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.courses-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.course {
+    background-color: #ebebeb;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    flex: 0 0 30%;
+    font-weight: 700;
+    padding: 1rem;
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.course.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.course-completed {
+    background-color: #66301D;
+    color: var(--text-color);
 }
 
 header span {
@@ -121,6 +182,7 @@ nav li {
     text-align: center;
 }
 
+nav li.selected,
 nav li:hover {
     background-color: gray;
 }
