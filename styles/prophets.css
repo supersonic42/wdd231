@@ -1,0 +1,51 @@
+:root {
+    --background-color: #fff;
+    --background-color-secondary: #164E70;
+    --text-color: #164E70;
+    --text-color-secondary: #fff;
+    --main-font: "Montserrat", serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-size: 16px;
+}
+
+header,
+main,
+footer {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    margin: 0;
+}
+
+.grid {
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card {
+    background-color: rgb(233, 233, 233);
+    border: 2px solid #ccc;
+    padding-bottom: 1rem;
+}
+
+.card img {
+    box-shadow: 0 0 10px #555;
+    max-width: 250px;
+    max-height: 310px;
+}
+
+.card .dob,
+.card .pob {
+    margin-bottom: 1rem;
+}
