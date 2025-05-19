@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Sunrise Cafe",
+    "address": "123 Morning Ln, Timbuktu",
+    "phone": "123-456-7890",
+    "website": "https://sunrisecafe.com",
+    "logo": "sunrise.jpg",
+    "membership": 3,
+    "tagline": "Fresh coffee and warm smiles"
+  },
+  {
+    "name": "Blue Dune Tours",
+    "address": "45 Sahara St, Timbuktu",
+    "phone": "987-654-3210",
+    "website": "https://bluedunetours.tmb",
+    "logo": "bluedune.jpg",
+    "membership": 2,
+    "tagline": "Explore the sands with us"
+  },
+  {
+    "name": "Timbuktu Traders",
+    "address": "789 Market Rd, Timbuktu",
+    "phone": "234-567-8901",
+    "website": "https://timbuktutraders.com",
+    "logo": "traders.jpg",
+    "membership": 1,
+    "tagline": "Local goods, global reach"
+  },
+  {
+    "name": "Desert Wellness",
+    "address": "15 Spa Hill, Timbuktu",
+    "phone": "111-222-3333",
+    "website": "https://desertwellness.tmb",
+    "logo": "wellness.jpg",
+    "membership": 2,
+    "tagline": "Relax, refresh, renew"
+  },
+  {
+    "name": "Nomad Tech",
+    "address": "99 Code Way, Timbuktu",
+    "phone": "333-444-5555",
+    "website": "https://nomadtech.com",
+    "logo": "nomadtech.jpg",
+    "membership": 3,
+    "tagline": "Innovation for every journey"
+  },
+  {
+    "name": "Oasis Grocers",
+    "address": "12 Water Rd, Timbuktu",
+    "phone": "444-555-6666",
+    "website": "https://oasisgrocers.com",
+    "logo": "oasisgrocers.jpg",
+    "membership": 1,
+    "tagline": "Your fresh source"
+  },
+  {
+    "name": "Caravan Courier",
+    "address": "6 Delivery Dr, Timbuktu",
+    "phone": "555-666-7777",
+    "website": "https://caravancourier.tmb",
+    "logo": "caravan.jpg",
+    "membership": 2,
+    "tagline": "Reliable delivery across the dunes"
+  }
+]
