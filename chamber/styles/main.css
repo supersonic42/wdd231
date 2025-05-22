@@ -357,6 +357,7 @@ nav#nav-menu {
 
     nav.open {
         display: block;
+        z-index: 10;
     }
 
     nav {
@@ -419,5 +420,9 @@ nav#nav-menu {
 
     .footer-socials a {
         margin: 0 0.5rem 0 0;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
     }
 }
