@@ -1,8 +1,12 @@
-async function loadMembers() {
+async function loadMembers(memberNumber = null) {
   const response = await fetch('./data/members.json');
   const members = await response.json();
 
-  members.forEach(member => createBusinessCard(member));
+  const membersToShow = memberNumber !== null
+    ? members.slice(0, memberNumber)
+    : members;
+
+  membersToShow.forEach(member => createBusinessCard(member));
 }
 
 function createBusinessCard(data) {
@@ -58,25 +62,3 @@ function createBusinessCard(data) {
 
   container.appendChild(card);
 }
-
-loadMembers();
-
-document.addEventListener('DOMContentLoaded', function () {
-  const layoutLinks = document.querySelectorAll('.layout-selector a');
-  const cardsSection = document.querySelector('.business-cards');
-
-  layoutLinks.forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-
-      layoutLinks.forEach(l => l.classList.remove('active'));
-      this.classList.add('active');
-      const layout = this.classList.contains('grid') ? 'grid' : 'column';
-      cardsSection.className = 'business-cards business-cards-' + layout;
-    });
-  });
-});
-
-document.getElementById("menu-toggle").addEventListener("click", () => {
-  document.getElementById("nav").classList.toggle("open");
-});
