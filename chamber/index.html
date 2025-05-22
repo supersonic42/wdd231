@@ -30,14 +30,14 @@
     <header></header>
 
     <main>
-        <section class="hero">
+        <div class="hero">
             <picture>
                 <source srcset="images/hero-small.jpg" media="(max-width: 640px)">
                 <img src="images/hero-large.jpg" alt="Timbuktu Hero">
             </picture>
 
             <a href="join.html" class="cta-button">Join Chamber</a>
-        </section>
+        </div>
 
         <h1>Home</h1>
 
@@ -53,7 +53,10 @@
                     <img id="weather-icon" src="" alt="Weather icon">
                     <ul>
                         <li class="weather-current-main-info">
-                            <p><strong id="temp">--°F</strong><div id="description">--</div></p>
+                            <div>
+                                <strong id="temp">--°F</strong>
+                                <div id="description">--</div>
+                            </div>
                         </li>
                         <li>High: <span id="temp-max">--°F</span></li>
                         <li>Low: <span id="temp-min">--°F</span></li>
@@ -62,7 +65,6 @@
                         <li>Sunset: <span id="sunset">--</span></li>
                     </ul>
                 </div>
-
             </div>
 
             <div class="home-info-card weather-forecast">
