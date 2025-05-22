@@ -1,6 +1,18 @@
-async function loadMembers(memberNumber = null) {
+async function loadMembers(memberNumber = null, memberships = null, randomize = false) {
   const response = await fetch('./data/members.json');
-  const members = await response.json();
+  let members = await response.json();
+
+  // Filter by membership
+  if (Array.isArray(memberships)) {
+    members = members.filter(member =>
+      memberships.includes(member.membership)
+    );
+  }
+
+  if (randomize)
+  {
+    shuffleArray(members);
+  }
 
   const membersToShow = memberNumber !== null
     ? members.slice(0, memberNumber)
@@ -47,10 +59,20 @@ function createBusinessCard(data) {
 
   const hostname = new URL(data.website).hostname.replace(/^www\./, '');
 
+  const membershipLevels = {
+    1: 'Non-profit',
+    2: 'Silver',
+    3: 'Gold'
+  };
+
+  const membershipLevelName = membershipLevels[data.membership];
+
   contact.innerHTML = `
     <p><strong>Email:</strong> <a href="mailto:info@${new URL(data.website).hostname}">info@${new URL(data.website).hostname}</a></p>
     <p><strong>Phone:</strong> ${data.phone}</p>
     <p><strong>URL:</strong> <a href="${data.website}" target="_blank">${hostname}</a></p>
+    <p><strong>Address:</strong> ${data.address}</p>
+    <p><strong>Membership:</strong> <span class="business-card-membership" data-membership="${data.membership}">${membershipLevelName}</p>
   `;
 
   body.appendChild(logo);

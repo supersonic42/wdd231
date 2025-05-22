@@ -168,6 +168,34 @@ nav a {
     font-size: 0.8rem;
 }
 
+.business-card-membership {
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    color: #fff;
+    display: inline-flex;
+    font-size: 0.7rem;
+    font-weight: 700;
+    height: 22px;
+    justify-content: center;
+    margin-left: 0.5rem;
+    text-shadow: 1px 1px 2px #333;
+    vertical-align: middle;
+    width: 80px;
+}
+
+.business-card-membership[data-membership="1"] {
+    background-color: rgb(65, 143, 118);
+}
+
+.business-card-membership[data-membership="2"] {
+    background-color: silver;
+}
+
+.business-card-membership[data-membership="3"] {
+    background-color: rgba(248, 215, 27, 0.927);
+}
+
 .layout-selector {
     margin: 0 0 1rem 0;
 }
@@ -247,6 +275,76 @@ nav#nav-menu {
     display: flex;
     gap: 1rem;
 }
+
+/* Index page */
+.hero {
+    margin-bottom: 1rem;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.hero img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.cta-button {
+    background: var(--secondary-color);
+    border-radius: 5px;
+    bottom: 20px;
+    color: var(--text-color);
+    font-weight: bold;
+    padding: 10px 15px;
+    position: absolute;
+    right: 20px;
+    text-decoration: none;
+}
+
+.info-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 2fr 1fr 1fr;
+    margin: 1rem 0;
+}
+
+.home-info-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+
+.home-info-card h2 {
+    background: var(--primary-color);
+    color: white;
+    font-size: 1.2em;
+    margin: -1rem -1rem 1rem -1rem;
+    padding: 0.5rem 1rem;
+}
+
+.weather-current-content img {
+    display: block;
+    margin: 0 auto;
+}
+
+.weather-current-main-info {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.weather-current-content li span {
+    font-weight: 700;
+}
+
+.weather-current-content ul,
+.weather-forecast ul {
+    font-size: 0.9rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 
 @media (max-width: 640px) {
     .top-bar {

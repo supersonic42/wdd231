@@ -24,11 +24,19 @@ fetch('footer.html')
     .then(response => response.text())
     .then(data => {
         document.getElementsByTagName('footer')[0].innerHTML = data;
+
+        const today = new Date();
+        const currentyear = document.querySelector("#currentyear");
+        const lastModified = document.querySelector("#lastModified");
+
+        currentyear.innerHTML = today.getFullYear();
+        lastModified.innerHTML = 'Last Update: ' + document.lastModified;
     });
 
-const today = new Date();
-const currentyear = document.querySelector("#currentyear");
-const lastModified = document.querySelector("#lastModified");
-
-currentyear.innerHTML = today.getFullYear();
-lastModified.innerHTML = 'Last Update: ' + document.lastModified;
+function shuffleArray(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
