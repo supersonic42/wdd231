@@ -1,0 +1,148 @@
+#cards-container {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.place-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-areas:
+        "image"
+        "title"
+        "address"
+        "description"
+        "button";
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1rem;
+}
+
+.place-card figure {
+    grid-area: image;
+    margin: 0;
+    overflow: hidden;
+}
+
+.place-card img {
+    aspect-ratio: 3 / 2;
+    border-radius: 8px;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+}
+
+.place-card img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.place-card h2 {
+    grid-area: title;
+    color: #333;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.place-card address {
+    grid-area: address;
+    color: #666;
+    font-size: 0.9rem;
+    font-style: normal;
+    margin: 0.5rem;
+}
+
+.place-card p {
+    grid-area: description;
+    color: #444;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.place-card button {
+    grid-area: button;
+    background-color: #007bff;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s ease;
+    justify-self: start;
+}
+
+.place-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Medium screens: horizontal layout inside a single card */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .place-card {
+        grid-template-areas:
+            "image info";
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto;
+    }
+
+    .place-card figure {
+        margin: 0;
+    }
+
+    .place-card figure img:hover {
+        transform: scale(1.1);
+        filter: brightness(1.1);
+        cursor: pointer;
+    }
+
+    .place-card h2,
+    .place-card address,
+    .place-card p,
+    .place-card button {
+        margin-bottom: 0.5rem;
+    }
+
+    .place-card>*:not(figure) {
+        grid-area: info;
+        display: block;
+    }
+
+    .place-card h2 {
+        margin-top: 0;
+    }
+
+    .place-card {
+        row-gap: 0.5rem;
+        column-gap: 1rem;
+    }
+
+    .place-card>.info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/* Large screens: 2 cards per row */
+@media (min-width: 1025px) {
+    #cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .place-card {
+        grid-template-areas:
+            "image"
+            "title"
+            "address"
+            "description"
+            "button";
+        grid-template-columns: 1fr;
+    }
+
+    .place-card figure img:hover {
+        transform: scale(1.1);
+        filter: brightness(1.1);
+        cursor: pointer;
+    }
+}

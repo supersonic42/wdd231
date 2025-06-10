@@ -243,6 +243,11 @@ footer {
     flex: 0 0 330px;
 }
 
+.footer-visit-msg {
+    margin: 0.5 1rem;
+    text-align: center;
+}
+
 .socials a {
     display: inline-block;
     height: 32px;
