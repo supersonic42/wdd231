@@ -62,7 +62,7 @@
 
 .place-card button {
     grid-area: button;
-    background-color: #007bff;
+    background-color: var(--text-color-secondary);
     border: none;
     border-radius: 6px;
     color: white;
