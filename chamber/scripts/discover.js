@@ -14,6 +14,7 @@ places.forEach(place => {
     const img = document.createElement('img');
     img.src = place.photo;
     img.alt = place.name;
+    img.loading = 'lazy';
     figure.appendChild(img);
 
     const address = document.createElement('address');
