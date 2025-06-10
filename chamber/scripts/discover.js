@@ -32,36 +32,3 @@ places.forEach(place => {
 
     container.appendChild(card);
 });
-
-function showVisitMessageInFooter() {
-    const now = Date.now();
-    const lastVisit = localStorage.getItem("lastVisit");
-    let message = "";
-
-    if (!lastVisit) {
-        message = "Welcome! Let us know if you have any questions.";
-    } else {
-        const diffMs = now - parseInt(lastVisit, 10);
-        const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-
-        if (diffDays === 0) {
-            message = "Back so soon! Awesome!";
-        } else if (diffDays === 1) {
-            message = "You last visited 1 day ago.";
-        } else {
-            message = `You last visited ${diffDays} days ago.`;
-        }
-    }
-
-    localStorage.setItem("lastVisit", now.toString());
-
-    const footer = document.querySelector("footer");
-    if (footer) {
-        const msg = document.createElement("p");
-        msg.classList.add('footer-visit-msg')
-        msg.textContent = message;
-        footer.appendChild(msg);
-    }
-}
-
-showVisitMessageInFooter();
