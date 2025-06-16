@@ -2,6 +2,11 @@ import { products } from './products.js';
 
 const grid = document.querySelector('.shop-grid');
 
+const modal = document.getElementById('product-modal');
+const modalTitle = document.getElementById('modal-title');
+const modalDescription = document.getElementById('modal-description');
+const modalClose = document.getElementById('modal-close');
+
 async function renderProducts() {
     try {
         await new Promise(resolve => setTimeout(resolve, 0));
@@ -26,6 +31,12 @@ async function renderProducts() {
                 </div>
             `;
 
+            item.addEventListener('click', () => {
+                modalTitle.textContent = product.title;
+                modalDescription.textContent = product.description;
+                modal.classList.remove('hidden');
+            });
+
             grid.appendChild(item);
         });
     } catch (error) {
@@ -33,5 +44,17 @@ async function renderProducts() {
         grid.innerHTML = '<p>Sorry, failed to load products. Please try again later.</p>';
     }
 }
+
+// Close modal on X button click
+modalClose.addEventListener('click', () => {
+    modal.classList.add('hidden');
+});
+
+// Optional: close modal when clicking outside content
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.classList.add('hidden');
+    }
+});
 
 renderProducts();
