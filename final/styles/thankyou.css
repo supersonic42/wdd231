@@ -1,0 +1,11 @@
+.thankyou-message {
+    background-color: var(--background-color-secondary);
+    border-left: 4px solid var(--accent-color);
+    margin: 2rem auto;
+    max-width: 600px;
+    padding: 2rem;
+}
+
+#out-question {
+    white-space: pre-line;
+}
