@@ -35,6 +35,10 @@ h2 {
   font-weight: 700;
 }
 
+h1 {
+    text-align: center;
+}
+
 header {
   align-items: center;
   background-color: var(--background-color-secondary);

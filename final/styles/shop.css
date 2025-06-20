@@ -1,8 +1,5 @@
 main {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: var(--main-font);
-    padding: 2rem 1rem;
+    padding-bottom: 2rem;
 }
 
 .shop-grid {
